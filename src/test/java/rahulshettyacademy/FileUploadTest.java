@@ -21,12 +21,12 @@ public class FileUploadTest {
 
         driver.get("https://qa-automation-practice.netlify.app/file-upload.html");
 
-        //String projectPath = System.getProperty("user.dir");
-        //String fileToUploadPath = projectPath+"/src/main/resources/test.pdf";
-        //WebElement chooseFileButton = driver.findElement(By.cssSelector("input#file_upload"));
-        //chooseFileButton.sendKeys(fileToUploadPath);
+        String projectPath = System.getProperty("user.dir");
+        String fileToUploadPath = projectPath+"/src/main/resources/test.pdf";
+        WebElement chooseFileButton = driver.findElement(By.cssSelector("input#file_upload"));
+        chooseFileButton.sendKeys(fileToUploadPath);
 
-        Runtime.getRuntime().exec("src/main/resources/AutoIT/install/UploadFile.exe");
+        //Runtime.getRuntime().exec("src/main/resources/AutoIT/install/UploadFile.exe");
 
 
         driver.quit();
