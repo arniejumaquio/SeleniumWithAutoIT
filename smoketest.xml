@@ -3,7 +3,7 @@
 <suite name="Smoke Suite">
 
     <listeners>
-        <listener class-name="rahulshettyacademy.test_components.Listener"></listener>
+        <listener class-name="rahulshettyacademy.test_components.Listener"> </listener>
     </listeners>
 
 
