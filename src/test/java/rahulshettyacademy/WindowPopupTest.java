@@ -6,21 +6,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.Test;
+import rahulshettyacademy.test_components.BaseTest;
 
 import java.net.URI;
 import java.time.Duration;
 import java.util.function.Predicate;
 
-public class WindowPopupTest {
+public class WindowPopupTest  extends BaseTest {
 
     @Test
     public void windowPopupTest() throws InterruptedException {
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 
         String username = "admin";
         String password = "admin";
@@ -33,7 +28,6 @@ public class WindowPopupTest {
         WebElement basiAuthLink = driver.findElement(By.xpath("//a[text()='Basic Auth']"));
         basiAuthLink.click();
 
-        driver.quit();
 
     }
 

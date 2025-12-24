@@ -5,19 +5,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
+import rahulshettyacademy.test_components.BaseTest;
 
 import java.io.IOException;
 import java.time.Duration;
 
-public class FileUploadTest {
+public class FileUploadTest extends BaseTest {
 
     @Test
     public void fileUploadTest() throws IOException {
 
-        System.setProperty("webdriver.chrome.driver","src/main/resources/drivers/chromedriver");
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 
         driver.get("https://qa-automation-practice.netlify.app/file-upload.html");
 
@@ -29,7 +27,6 @@ public class FileUploadTest {
         //Runtime.getRuntime().exec("src/main/resources/AutoIT/install/UploadFile.exe");
 
 
-        driver.quit();
     }
 
 }
