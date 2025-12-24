@@ -41,7 +41,7 @@ public class FileDownloadTest extends BaseTest {
 
         }
 
-        System.out.println("File found");
+        System.out.println("File found.");
         Assert.assertTrue(true);
 
 
