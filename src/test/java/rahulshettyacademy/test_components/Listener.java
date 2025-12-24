@@ -30,7 +30,7 @@ public class Listener extends BaseTest implements ITestListener{
         //take screenshot then attach to the report
         Object testInstance = result.getInstance();  // Gets the test class object
         this.driver = ((BaseTest) testInstance).driver;  // Accesses its driver field
-        String screenShotPath = Screenshot.takeScreenshot(driver);
+        String screenShotPath = Screenshot.takeScreenshot(driver,result.getMethod().getMethodName());
         extentTest.addScreenCaptureFromPath(screenShotPath);
 
     }

@@ -11,14 +11,14 @@ import java.util.UUID;
 
 public class Screenshot {
 
-    public static String takeScreenshot(WebDriver driver){
+    public static String takeScreenshot(WebDriver driver,String testCaseName){
 
        File screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
        String screenShotPath  = null;
 
         try {
 
-            screenShotPath = System.getProperty("user.dir")+"/src/main/resources/screenshots/"+ UUID.randomUUID().toString()+".jpg";
+            screenShotPath = System.getProperty("user.dir")+"/src/main/resources/screenshots/"+ testCaseName+".jpg";
             FileUtils.copyFile(screenShot, new File(screenShotPath));
 
         } catch (IOException e) {
